@@ -12,8 +12,14 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route element={<PageLayout />}>
-          <Route path={ROUTES.home()} element={renderLazyElement(<Home />)} />
-          <Route path={ROUTES.groceryDetails()} element={renderLazyElement(<ListDetails />)} />
+          <Route
+            path={ROUTES.home()}
+            element={renderLazyElement(<Home />)}
+          />
+          <Route
+            path={ROUTES.groceryDetails()}
+            element={renderLazyElement(<ListDetails />)}
+          />
         </Route>
       </Routes>
     </BrowserRouter>

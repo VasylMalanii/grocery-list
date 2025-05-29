@@ -1,8 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import GroceryListItem from '@/components/groceries/GroceryListItem'
-import useGroceries from '@/hooks/api/useGroceries'
-import { Skeleton } from '@/components/ui/skeleton'
-import times from 'lodash.times'
+import SkeletonList from '@/components/shared/SkeletonList.tsx'
+import { useGroceries } from '@/api/groceries/GroceriesQueries.ts'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -14,13 +13,16 @@ export default function Home() {
       <title>{t('pages.home')}</title>
       <h1 className="text-2xl font-bold mb-4">{t('home.myLists')}</h1>
       {isLoading ? (
+        <SkeletonList count={3} />
+      ) : (
         <>
-          {times(3, (index) => (
-            <Skeleton key={index} className="w-full h-[80px] rounded-xl mb-4" />
+          {data?.map((grocery) => (
+            <GroceryListItem
+              key={grocery.id}
+              item={grocery}
+            />
           ))}
         </>
-      ) : (
-        <>{data?.map((grocery) => <GroceryListItem key={grocery.id} item={grocery} />)}</>
       )}
     </div>
   )

@@ -5,6 +5,7 @@ const ApiQueryClient = new QueryClient({
     queries: {
       gcTime: 0,
       refetchOnWindowFocus: false,
+      retry: 0,
     },
   },
 })

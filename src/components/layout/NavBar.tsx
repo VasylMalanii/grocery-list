@@ -8,7 +8,10 @@ export default function NavBar() {
   return (
     <header className="bg-primary text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to={ROUTES.home()} className="font-bold text-lg">
+        <Link
+          to={ROUTES.home()}
+          className="font-bold text-lg"
+        >
           {t('title')}
         </Link>
       </div>

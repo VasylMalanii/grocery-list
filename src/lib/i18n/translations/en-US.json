@@ -3,7 +3,13 @@
   "pages": {
     "home": "Home"
   },
+  "errorOccurred": "An error occurred",
   "home": {
     "myLists": "My Lists"
+  },
+  "groceryDetails": {
+    "addItem": "Add Item",
+    "enterYourText": "Enter your text here",
+    "amount": "Amount"
   }
 }

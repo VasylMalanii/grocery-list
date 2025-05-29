@@ -9,6 +9,7 @@ import groceryItemsSlice from '@/store/slices/groceryItemsSlice.ts'
 import GroceryItemForm from '@/components/groceryItems/GroceryItemForm.tsx'
 import React, { useCallback } from 'react'
 import { useDeleteGroceryItemMutation, useToggleGroceryItemMutation } from '@/api/groceryItems/GroceryItemsMutations.ts'
+import type { CheckedState } from '@radix-ui/react-checkbox'
 
 type Props = {
   groceryId: string
@@ -35,6 +36,12 @@ function GroceryItem(props: Props) {
     dispatch(groceryItemsSlice.actions.setEditItem(undefined))
   }, [dispatch])
 
+  const onToggle = (value: CheckedState) => toggleMutation.mutate(!!value)
+
+  const onEdit = () => dispatch(groceryItemsSlice.actions.setEditItem(item.id))
+
+  const onDelete = () => deleteMutation.mutate()
+
   if (editItemId === item.id) {
     return (
       <GroceryItemForm
@@ -51,9 +58,7 @@ function GroceryItem(props: Props) {
         <div className="flex items-center gap-4">
           <Checkbox
             checked={item.isBought}
-            onCheckedChange={(value) => {
-              toggleMutation.mutate(!!value)
-            }}
+            onCheckedChange={onToggle}
           />
           <div>
             <p className={cn('text-lg', { 'line-through': item.isBought })}>{item.text}</p>
@@ -65,14 +70,14 @@ function GroceryItem(props: Props) {
             size="icon"
             variant="ghost"
             disabled={isDisabledEditing}
-            onClick={() => dispatch(groceryItemsSlice.actions.setEditItem(item.id))}
+            onClick={onEdit}
           >
             <Pencil size={16} />
           </Button>
           <Button
             size="icon"
             variant="ghost"
-            onClick={() => deleteMutation.mutate()}
+            onClick={onDelete}
             disabled={isDisabledEditing}
           >
             <Trash size={16} />

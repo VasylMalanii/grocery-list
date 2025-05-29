@@ -15,7 +15,7 @@ import useGroceryItems from '@/api/groceryItems/GroceryItemsQueries.ts'
 export default function GroceryDetails() {
   const { t } = useTranslation()
   const { id } = useParams()
-  const groceryId = id || ''
+  const groceryId = id ?? ''
 
   const { data: grocery, error: groceryError } = useGrocery(groceryId)
   const { data: items, isLoading: isLoadingItems } = useGroceryItems(groceryId)
@@ -47,35 +47,33 @@ export default function GroceryDetails() {
       {isLoadingItems ? (
         <SkeletonList count={3} />
       ) : (
-        <>
-          <div className="space-y-4">
-            {items?.map((item) => (
-              <GroceryItem
-                key={item.id}
-                item={item}
-                groceryId={groceryId}
-              />
-            ))}
-            {isAdding ? (
-              <GroceryItemForm
-                groceryId={groceryId}
-                onComplete={onAddItemComplete}
-              />
-            ) : (
-              <Button
-                className="mt-1"
-                onClick={onAddItem}
-                disabled={isDisabledEditing}
-              >
-                <Plus
-                  className="mr-2"
-                  size={16}
-                />{' '}
-                {t('groceryDetails.addItem')}
-              </Button>
-            )}
-          </div>
-        </>
+        <div className="space-y-4">
+          {items?.map((item) => (
+            <GroceryItem
+              key={item.id}
+              item={item}
+              groceryId={groceryId}
+            />
+          ))}
+          {isAdding ? (
+            <GroceryItemForm
+              groceryId={groceryId}
+              onComplete={onAddItemComplete}
+            />
+          ) : (
+            <Button
+              className="mt-1"
+              onClick={onAddItem}
+              disabled={isDisabledEditing}
+            >
+              <Plus
+                className="mr-2"
+                size={16}
+              />{' '}
+              {t('groceryDetails.addItem')}
+            </Button>
+          )}
+        </div>
       )}
     </div>
   )

@@ -5,7 +5,9 @@
   },
   "errorOccurred": "An error occurred",
   "home": {
-    "myLists": "My Lists"
+    "myLists": "My Lists",
+    "addList": "Add List",
+    "title": "Title"
   },
   "groceryDetails": {
     "addItem": "Add Item",

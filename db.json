@@ -1,0 +1,11 @@
+{
+  "lists": [
+    { "id": "1", "title": "First list" },
+    { "id": "2", "title": "Second list" }
+  ],
+  "items": [
+    { "id": "1", "text": "Milk", "isBought": false, "listId": "1" },
+    { "id": "2", "text": "Cookies", "amount": 1, "isBought": false, "listId": "1" },
+    { "id": "2", "text": "Smth", "amount": 22.5, "isBought": false, "listId": "1" }
+  ]
+}

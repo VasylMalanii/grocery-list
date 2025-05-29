@@ -1,0 +1,9 @@
+{
+  "title": "Grocery List",
+  "pages": {
+    "home": "Home"
+  },
+  "home": {
+    "myLists": "My Lists"
+  }
+}

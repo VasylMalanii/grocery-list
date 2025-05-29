@@ -1,0 +1,55 @@
+{
+  "lists": [
+    {
+      "id": "2c1b9ade-a4ad-40d9-bb59-bb031b7ccd51",
+      "title": "First list"
+    },
+    {
+      "id": "ddbe9187-2d18-4cbf-ab84-e9bf64927669",
+      "title": "Second list"
+    }
+  ],
+  "items": [
+    {
+      "id": "a143006f-d1f2-490c-80a7-c88ac8d56b01",
+      "text": "Cookies",
+      "amount": 10,
+      "isBought": true,
+      "listId": "2c1b9ade-a4ad-40d9-bb59-bb031b7ccd51"
+    },
+    {
+      "id": "5GyCTWOOFkzzN0oHZf4vn",
+      "text": "test",
+      "amount": 23,
+      "isBought": false,
+      "listId": "ddbe9187-2d18-4cbf-ab84-e9bf64927669"
+    },
+    {
+      "id": "P04pBgXZtuWYb_T2hY0NG",
+      "text": "te212222",
+      "amount": 0.41222,
+      "isBought": true,
+      "listId": "2c1b9ade-a4ad-40d9-bb59-bb031b7ccd51"
+    },
+    {
+      "id": "GKdKqI6tRQ8LzzaJ9qDGx",
+      "text": "test",
+      "amount": 22,
+      "isBought": false,
+      "listId": "ddbe9187-2d18-4cbf-ab84-e9bf64927669"
+    },
+    {
+      "id": "BdWvDJyEdoaPdrPcjL2F2",
+      "text": "ttest222222",
+      "isBought": false,
+      "listId": "2c1b9ade-a4ad-40d9-bb59-bb031b7ccd51"
+    },
+    {
+      "id": "pugqm-N6Pb7vDvXOd061H",
+      "text": "Cookies test",
+      "amount": 20,
+      "isBought": false,
+      "listId": "2c1b9ade-a4ad-40d9-bb59-bb031b7ccd51"
+    }
+  ]
+}

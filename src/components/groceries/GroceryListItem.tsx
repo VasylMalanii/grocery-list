@@ -1,7 +1,7 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Link } from 'react-router'
-import ROUTES from '@/constants/routes.ts'
-import type { Grocery } from '@/types/models/Grocery.ts'
+import ROUTES from '@/constants/routes'
+import type { Grocery } from '@/types/models/Grocery'
 
 type Props = {
   item: Grocery

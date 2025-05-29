@@ -1,6 +1,6 @@
-import type { Grocery } from '@/types/models/Grocery.ts'
-import ApiClient from '@/api/ApiClient.ts'
-import { GroceryArraySchema } from '@/schemas/GrocerySchema.ts'
+import type { Grocery } from '@/types/models/Grocery'
+import ApiClient from '@/api/ApiClient'
+import { GroceryArraySchema } from '@/schemas/GrocerySchema'
 
 export const GroceriesApi = {
   async getItems(): Promise<Grocery[]> {

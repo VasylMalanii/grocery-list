@@ -1,19 +1,11 @@
-import Router from '@/app/Router.tsx'
-import '@/lib/i18n/i18n.ts'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      gcTime: 0,
-      refetchOnWindowFocus: false,
-    },
-  },
-})
+import Router from '@/app/Router'
+import '@/lib/i18n/i18n'
+import { QueryClientProvider } from '@tanstack/react-query'
+import ApiQueryClient from '@/api/ApiQueryClient'
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={ApiQueryClient}>
       <Router />
     </QueryClientProvider>
   )

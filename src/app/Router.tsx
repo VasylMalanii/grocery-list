@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
-import { renderLazyElement } from '@/utils/renderLazyElement.tsx'
+import { renderLazyElement } from '@/utils/renderLazyElement'
 import { lazy } from 'react'
-import ROUTES from '@/constants/routes.ts'
-import PageLayout from '@/components/layout/PageLayout.tsx'
+import ROUTES from '@/constants/routes'
+import PageLayout from '@/components/layout/PageLayout'
 
 const Home = lazy(() => import('@/pages/Home'))
 const ListDetails = lazy(() => import('@/pages/GroceryDetails'))

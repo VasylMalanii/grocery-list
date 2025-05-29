@@ -44,6 +44,7 @@ export default tseslint.config(
       ],
       ...importPlugin.configs.recommended.rules,
       'import/no-unresolved': 'off',
+      "import/extensions": 0,
       ...jsxA11y.configs.recommended.rules,
       ...prettierConfig.rules,
       'prettier/prettier': 'error',

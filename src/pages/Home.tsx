@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
-import GroceryListItem from '@/components/groceries/GroceryListItem.tsx'
-import useGroceries from '@/hooks/api/useGroceries.tsx'
-import { Skeleton } from '@/components/ui/skeleton.tsx'
+import GroceryListItem from '@/components/groceries/GroceryListItem'
+import useGroceries from '@/hooks/api/useGroceries'
+import { Skeleton } from '@/components/ui/skeleton'
 import times from 'lodash.times'
 
 export default function Home() {

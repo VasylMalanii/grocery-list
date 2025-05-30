@@ -10,6 +10,7 @@ import GroceryItemForm from '@/components/groceryItems/GroceryItemForm.tsx'
 import React, { useCallback } from 'react'
 import { useDeleteGroceryItemMutation, useToggleGroceryItemMutation } from '@/api/groceryItems/GroceryItemsMutations.ts'
 import type { CheckedState } from '@radix-ui/react-checkbox'
+import AlertModal from '@/components/shared/AlertModal.tsx'
 
 type Props = {
   groceryId: string
@@ -74,14 +75,18 @@ function GroceryItem(props: Props) {
           >
             <Pencil size={16} />
           </Button>
-          <Button
-            size="icon"
-            variant="ghost"
-            onClick={onDelete}
+          <AlertModal
+            onOk={onDelete}
             disabled={isDisabledEditing}
           >
-            <Trash size={16} />
-          </Button>
+            <Button
+              size="icon"
+              variant="ghost"
+              disabled={isDisabledEditing}
+            >
+              <Trash size={16} />
+            </Button>
+          </AlertModal>
         </div>
       </CardContent>
     </Card>

@@ -4,6 +4,12 @@
     "home": "Home"
   },
   "errorOccurred": "An error occurred",
+  "alertDialog": {
+    "title": "Are you sure?",
+    "message": "This action cannot be undone.",
+    "ok": "OK",
+    "cancel": "Cancel"
+  },
   "home": {
     "myLists": "My Lists",
     "addList": "Add List",
